@@ -1,0 +1,24 @@
+-classpath
+'C:/Users/golan/.m2/repository/javax/javaee-web-api/7.0/javaee-web-api-7.0.jar;C:/Users/golan/.m2/repository/com/mycompany/Word/1.0-SNAPSHOT/Word-1.0-SNAPSHOT.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'C:/Users/golan/Documents/NetBeansProjects/Wordify/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2015. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/golan/Documents/NetBeansProjects/Wordify/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'Wordify 1.0-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/7/docs/api' 'C:/Users/golan/Documents/NetBeansProjects/Wordify/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'Wordify 1.0-SNAPSHOT API'

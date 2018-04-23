@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+          
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <h:outputStylesheet library="css" name="shift.css"/>
+        <h:outputStylesheet library="css" name="boostrap.css"/>
+        <h:outputScript library="script" name="jquery.min.js"/>    
+
+
+        <h:outputScript library="script" name="app.js"/>
+        <h:outputStylesheet library="css" name="styles.css"/> 
+    </h:head>
+    <h:body>
+
+        <div class="nav">
+            <div class="container">
+                
+                <ul class="pull-left">
+
+                    <li><a href="#">Name</a></li>
+                    <li><a href="#">Browse</a></li>
+                    <h:form>
+                        <h:commandButton value="Download" action="#{managedBean.downloadFileFromURL()}"/>
+                    </h:form>
+                    <h:form>
+                    <h:outputText id="txt_count" value="#{counterView.number}" />
+                    <p:poll interval="3" listener="#{counterView.increment}" update="txt_count" />
+                </h:form>
+
+                </ul>
+                <ul class="pull-right">
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li class="dropdown">  <a href="#" class="dropdown-toggle">More <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Our Blog</a></li>
+                            <li><a href="#">Maps Blog</a></li>
+                            <li><a href="#">Eng Blog</a></li>
+                            <li><a href="#">Advertisers</a></li>
+                            <li><a href="#">Publishers</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="pull-right">
+                <h:graphicImage library="images" name="slide2.png" styleClass="images"/>
+
+            </div>
+            <div class="container">
+
+                <h1>More Dev Classes than you can handle</h1><br />
+                <p>What will you learn in 2014? Gain insight into the latest cutting edge technologies and be one of the firsts to obtain hands on experience on state of the art platforms and frameworks!</p>
+                <a href="#">Get started</a>
+            </div>
+        </div>
+        <div class="neighborhood-guides">
+            <div class="container">
+                <h2>Neighbourhood Guides</h2>
+                <p>not sure where to stay? We've created neighborhood guides for cities all around the world.</p>
+                <div class = "row">
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <img src="http://goo.gl/0sX3jq"></img>
+                        </div>
+                        <div class = "thumbnail">
+                            <img src ="http://goo.gl/an2HXY"></img>
+                        </div>
+                    </div>
+                    <div class="col-md-4"> 
+                        <div class = "thumbnail">
+                            <img src ="http://goo.gl/Av1pac"></img>
+                        </div>
+                        <div class = "thumbnail">
+                            <img src ="http://goo.gl/vw43v1"></img>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class = "thumbnail">
+                            <img src ="http://goo.gl/0Kd7UO"></img>
+                        </div></div>
+                </div> 
+            </div></div>
+        <div class="learn-more">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Travel</h3>
+                        <p>From apartments and rooms to treehouses and boats: stay in unique spaces in 192 countries.</p>
+                        <p><a href="#">See how to travel on Airbnb</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Host</h3>
+                        <p>Renting out your unused space could pay your bills or fund your next vacation.</p>
+                        <p><a href="#">Learn more about hosting</a></p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Trust and Safety</h3>
+                        <p>From Verified ID to our worldwide customer support team, we've got your back.</p>
+                        <p><a href="#">Learn about trust at Airbnb</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <br /><h:form>
+            <h:link outcome="../groups/List" value="Show All Groups Items"/>
+            <br />
+            <h:link outcome="../personGroups/List" value="Show All PersonGroups Items"/>
+            <br />
+            <h:link outcome="../users/List" value="Show All Users Items"/>
+        </h:form>
+        <br />
+        <h:link outcome="welcomePrimefaces" value="Primefaces welcome page" />
+    </h:body>
+
+
+
+</html>
+

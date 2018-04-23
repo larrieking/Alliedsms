@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.EditPersonGroupsTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.EditPersonGroupsLabel_id}" for="id" />
+                    <h:inputText id="id" value="#{personGroupsController.selected.id}" title="#{bundle.EditPersonGroupsTitle_id}" required="true" requiredMessage="#{bundle.EditPersonGroupsRequiredMessage_id}"/>
+                    <h:outputLabel value="#{bundle.EditPersonGroupsLabel_groups}" for="groups" />
+                    <h:selectOneMenu id="groups" value="#{personGroupsController.selected.groups}" title="#{bundle.EditPersonGroupsTitle_groups}" required="true" requiredMessage="#{bundle.EditPersonGroupsRequiredMessage_groups}">
+                        <f:selectItems value="#{groupsController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="#{bundle.EditPersonGroupsLabel_email}" for="email" />
+                    <h:selectOneMenu id="email" value="#{personGroupsController.selected.email}" title="#{bundle.EditPersonGroupsTitle_email}" required="true" requiredMessage="#{bundle.EditPersonGroupsRequiredMessage_email}">
+                        <f:selectItems value="#{usersController.itemsAvailableSelectOne}"/>
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandLink action="#{personGroupsController.update}" value="#{bundle.EditPersonGroupsSaveLink}"/>
+                <br />
+                <br />
+                <h:link outcome="View" value="#{bundle.EditPersonGroupsViewLink}"/>
+                <br />
+                <h:commandLink action="#{personGroupsController.prepareList}" value="#{bundle.EditPersonGroupsShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.EditPersonGroupsIndexLink}" />
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
